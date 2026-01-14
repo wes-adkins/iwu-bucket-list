@@ -1,0 +1,607 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;IWU Marion | Bucket List &amp; Weekend Adventures&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Bootstrap 5.3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>body { background: #f8fafc; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.hero { background: radial-gradient(1200px circle at 15% 10%, #1f2937 0%, #0b1020 45%, #060914 100%); color: #fff; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.card { border: 0; box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.chip { display: inline-flex; padding: .25rem .6rem; border-radius: 999px; background: #e2e8f0; font-size: .8rem; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>/* OSU-style selector list */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.list-group-item { border-color: rgba(148,163,184,.35); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.list-group-item.active { background: #0b1020; border-color: #0b1020; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.card-img-top { object-fit: cover; aspect-ratio: 16 / 9; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>/* Eyebrow label */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.eyebrow {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: .72rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>letter-spacing: .08em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #64748b;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: .25rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>/* Subtle animation on campus tab change */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.campus-pane-animate .card {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>animation: campusPaneIn 280ms ease-out;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>@keyframes campusPaneIn {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>from { transform: translateY(6px); opacity: .5; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>to { transform: translateY(0); opacity: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>.footer { background: #0b1020; color: #fff; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>/* Split-feature layout helpers */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.rounded-4 { border-radius: 1rem !important; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.shadow-sm { box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08) !important; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="hero py-5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="display-5 fw-bold"&gt;Your IWU Bucket List&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="lead"&gt;From campus traditions to weekend adventures, Marion puts unforgettable experiences within reach.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="d-flex gap-2 flex-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#campus" class="chip text-decoration-none"&gt;Campus&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#marion" class="chip text-decoration-none"&gt;Marion&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#fort-wayne" class="chip text-decoration-none"&gt;Fort Wayne&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#indianapolis" class="chip text-decoration-none"&gt;Indianapolis&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#chicago" class="chip text-decoration-none"&gt;Chicago&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="py-5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 id="campus" class="fw-bold mb-3"&gt;Campus Bucket List&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-muted"&gt;Classic IWU moments you can only have in Marion.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="row g-4 align-items-stretch"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- Left: selectable list (OSU-style) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="col-lg-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="list-group shadow-sm" id="campusExperienceList" role="tablist" aria-label="Campus bucket list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="list-group-item list-group-item-action active" id="campus-1-list" data-bs-toggle="list" data-bs-target="#campus-1" type="button" role="tab" aria-controls="campus-1" aria-selected="true"&gt;🏟️ Experience a Home Game of Every Sport&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="list-group-item list-group-item-action" id="campus-2-list" data-bs-toggle="list" data-bs-target="#campus-2" type="button" role="tab" aria-controls="campus-2" aria-selected="false"&gt;🏈 Tailgate a Rivalry Game&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="list-group-item list-group-item-action" id="campus-3-list" data-bs-toggle="list" data-bs-target="#campus-3" type="button" role="tab" aria-controls="campus-3" aria-selected="false"&gt;🙏 Chapel &amp; Campus Worship&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="list-group-item list-group-item-action" id="campus-4-list" data-bs-toggle="list" data-bs-target="#campus-4" type="button" role="tab" aria-controls="campus-4" aria-selected="false"&gt;🍽️ Have Lunch with Three Professors at Baldwin&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="list-group-item list-group-item-action" id="campus-5-list" data-bs-toggle="list" data-bs-target="#campus-5" type="button" role="tab" aria-controls="campus-5" aria-selected="false"&gt;📸 Capture the Classic IWU Photos&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="list-group-item list-group-item-action" id="campus-6-list" data-bs-toggle="list" data-bs-target="#campus-6" type="button" role="tab" aria-controls="campus-6" aria-selected="false"&gt;🎤 Step Outside Your Comfort Zone&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="list-group-item list-group-item-action" id="campus-7-list" data-bs-toggle="list" data-bs-target="#campus-7" type="button" role="tab" aria-controls="campus-7" aria-selected="false"&gt;☕ Find Your Go-To Study Spot&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="list-group-item list-group-item-action" id="campus-8-list" data-bs-toggle="list" data-bs-target="#campus-8" type="button" role="tab" aria-controls="campus-8" aria-selected="false"&gt;🎄 Celebrate Christmas on Campus&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="list-group-item list-group-item-action" id="campus-9-list" data-bs-toggle="list" data-bs-target="#campus-9" type="button" role="tab" aria-controls="campus-9" aria-selected="false"&gt;🎶 Catch Local Festival Energy (Spotted Cow)&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="list-group-item list-group-item-action" id="campus-10-list" data-bs-toggle="list" data-bs-target="#campus-10" type="button" role="tab" aria-controls="campus-10" aria-selected="false"&gt;⛺ Camp Out on the President’s Lawn&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button class="list-group-item list-group-item-action" id="campus-11-list" data-bs-toggle="list" data-bs-target="#campus-11" type="button" role="tab" aria-controls="campus-11" aria-selected="false"&gt;🎭 See a Show at the Phillippe Performing Arts Center&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="small text-muted mt-2 mb-0"&gt;Tip: Click each item to preview the experience—perfect for prospective students exploring campus life.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- Right: preview panel --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="col-lg-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="tab-content" id="campusExperienceContent"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="tab-pane fade show active" id="campus-1" role="tabpanel" aria-labelledby="campus-1-list" tabindex="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card h-100 overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;img src="https://www.indwes.edu/alumni/_img/football_linemen.webp" class="card-img-top" alt="IWU athletics home game" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="eyebrow"&gt;School Spirit&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="h5 fw-bold mb-2"&gt;🏟️ Experience a Home Game of Every Sport&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-0 text-muted"&gt;Make it a goal to cheer on every team at least once—football, basketball, volleyball, soccer, and more.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="tab-pane fade" id="campus-2" role="tabpanel" aria-labelledby="campus-2-list" tabindex="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card h-100 overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;img src="https://www.indwes.edu/_img/homecoming/tailgate-village.webp" class="card-img-top" alt="Students tailgating on game day" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="eyebrow"&gt;Campus Tradition&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="h5 fw-bold mb-2"&gt;🏈 Tailgate a Rivalry Game&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-0 text-muted"&gt;Grab your friends and tailgate the IWU–Taylor football game—fall weather, school spirit, and one of the biggest days of the year.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="tab-pane fade" id="campus-3" role="tabpanel" aria-labelledby="campus-3-list" tabindex="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card h-100 overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;img src="https://www.indwes.edu/admissions/visit-campus/_img/chapel_auditorium.webp" class="card-img-top" alt="Chapel and worship gathering" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="eyebrow"&gt;Faith + Community&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="h5 fw-bold mb-2"&gt;🙏 Chapel &amp; Campus Worship&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-0 text-muted"&gt;Pause the week to grow your faith, worship together, and build community.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="tab-pane fade" id="campus-4" role="tabpanel" aria-labelledby="campus-4-list" tabindex="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card h-100 overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;img src="https://www.indwes.edu/about/life-at-iwu/_img/dining_baldwin.webp" class="card-img-top" alt="Baldwin Dining Commons" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="eyebrow"&gt;Mentorship + Community&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="h5 fw-bold mb-2"&gt;🍽️ Have Lunch with Three Professors at Baldwin&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-0 text-muted"&gt;Pick a day, invite a few professors, and make Baldwin lunches part of your story—real conversations, real relationships.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="tab-pane fade" id="campus-5" role="tabpanel" aria-labelledby="campus-5-list" tabindex="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card h-100 overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;img src="https://www.indwes.edu/admissions/visit-campus/_img/wesley_building.webp" class="card-img-top" alt="Iconic IWU campus buildings" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="eyebrow"&gt;Campus Moments&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="h5 fw-bold mb-2"&gt;📸 Capture the Classic IWU Photos&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-0 text-muted"&gt;From iconic buildings to campus greens, these are the shots you’ll keep forever.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="tab-pane fade" id="campus-6" role="tabpanel" aria-labelledby="campus-6-list" tabindex="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card h-100 overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;img src="https://www.indwes.edu/academics/CAS/school-of-arts-and-humanities/_img/marching_band_flutes.webp" class="card-img-top" alt="Students participating in campus life" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="eyebrow"&gt;Leadership + Growth&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="h5 fw-bold mb-2"&gt;🎤 Step Outside Your Comfort Zone&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-0 text-muted"&gt;Lead, perform, serve, or join something new—you’ll be glad you did.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="tab-pane fade" id="campus-7" role="tabpanel" aria-labelledby="campus-7-list" tabindex="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card h-100 overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;img src="https://www.indwes.edu/admissions/visit-campus/_img/barnes_student.webp" class="card-img-top" alt="Student studying at Barnes Student Center" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="eyebrow"&gt;Study + Community&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="h5 fw-bold mb-2"&gt;☕ Find Your Go-To Study Spot&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-0 text-muted"&gt;The coffee shop or campus corner that feels like home during the semester.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="tab-pane fade" id="campus-8" role="tabpanel" aria-labelledby="campus-8-list" tabindex="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card h-100 overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;img src="https://www.indwes.edu/admissions/visit-campus/_img/williams_chapel.webp" class="card-img-top" alt="Campus seasonal tradition" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="eyebrow"&gt;Seasonal Tradition&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="h5 fw-bold mb-2"&gt;🎄 Celebrate Christmas on Campus&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-0 text-muted"&gt;Seasonal traditions, lights, and a campus atmosphere students never forget.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="tab-pane fade" id="campus-9" role="tabpanel" aria-labelledby="campus-9-list" tabindex="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card h-100 overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;img src="https://www.indwes.edu/_img/events/students-concert.webp" class="card-img-top" alt="Live music festival energy" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="eyebrow"&gt;Marion Tradition&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="h5 fw-bold mb-2"&gt;🎶 Catch Local Festival Energy&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-0 text-muted"&gt;Experience the Spotted Cow Music Festival—live music, local vibes, and a weekend that feels uniquely Marion.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="tab-pane fade" id="campus-10" role="tabpanel" aria-labelledby="campus-10-list" tabindex="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card h-100 overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;img src="https://www.indwes.edu/about/life-at-iwu/_img/students_sitting_outside.webp" class="card-img-top" alt="Students hanging out outdoors on campus" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="eyebrow"&gt;Campus Tradition&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="h5 fw-bold mb-2"&gt;⛺ Camp Out on the President’s Lawn&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-0 text-muted"&gt;Bring your friends, blankets, and snacks—one of those stories you’ll still tell after graduation.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="tab-pane fade" id="campus-11" role="tabpanel" aria-labelledby="campus-11-list" tabindex="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card h-100 overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;img src="https://www.indwes.edu/admissions/visit-campus/_img/ppac-auditorium.webp" class="card-img-top" alt="Phillippe Performing Arts Center auditorium" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="eyebrow"&gt;Arts + Culture&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="h5 fw-bold mb-2"&gt;🎭 See a Show at the Phillippe Performing Arts Center&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="mb-0 text-muted"&gt;Catch a concert, theatre performance, or campus production—an easy win for a memorable night.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 id="marion" class="fw-bold mt-5 mb-3"&gt;Marion &amp; Nearby Bucket List &lt;span class="chip ms-2"&gt;5–45 min&lt;/span&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-muted"&gt;Local traditions, small-town charm, and quick escapes that make Marion feel like home.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="row g-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="col-md-6 col-lg-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card h-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;img src="https://placehold.co/600x400" class="card-img-top" alt="IWU campus experience" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="d-flex justify-content-between align-items-start gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;h3 class="h6 fw-bold mb-1"&gt;🚴 Enjoy the Cardinal Greenway&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;span class="chip"&gt;Near Marion&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="mb-0 text-muted"&gt;Walk, run, or bike one of Indiana’s best trails—an easy way to explore Marion and reset between classes.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="col-md-6 col-lg-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card h-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;img src="https://placehold.co/600x400" class="card-img-top" alt="IWU campus experience" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="d-flex justify-content-between align-items-start gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;h3 class="h6 fw-bold mb-1"&gt;🏁 James Dean Festival in Fairmount&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;span class="chip"&gt;~20 min&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="mb-0 text-muted"&gt;Classic cars, small-town energy, and one of the area’s most iconic fall weekends.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="col-md-6 col-lg-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card h-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;img src="https://placehold.co/600x400" class="card-img-top" alt="IWU campus experience" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="d-flex justify-content-between align-items-start gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;h3 class="h6 fw-bold mb-1"&gt;✨ Holiday Lights at Matter Park&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;span class="chip"&gt;~10 min&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="mb-0 text-muted"&gt;A winter favorite for photos, hot chocolate, and a cozy night out with friends.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="col-md-6 col-lg-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card h-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;img src="https://placehold.co/600x400" class="card-img-top" alt="IWU campus experience" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="d-flex justify-content-between align-items-start gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;h3 class="h6 fw-bold mb-1"&gt;🌅 Sunset at Mississinewa Lake&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;span class="chip"&gt;~30 min&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="mb-0 text-muted"&gt;Unplug for an evening—lake views, deep conversations, and the kind of calm you remember.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="col-md-6 col-lg-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card h-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;img src="https://placehold.co/600x400" class="card-img-top" alt="IWU campus experience" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="d-flex justify-content-between align-items-start gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;h3 class="h6 fw-bold mb-1"&gt;🌲 Day Trip to Salamonie Lake&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;span class="chip"&gt;~45 min&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="mb-0 text-muted"&gt;Hike, paddle, or take a breather from the week—easy nature reset near campus.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="col-md-6 col-lg-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card h-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;img src="https://placehold.co/600x400" class="card-img-top" alt="IWU campus experience" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="d-flex justify-content-between align-items-start gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;h3 class="h6 fw-bold mb-1"&gt;🍦 Ivanhoe’s with Friends&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;span class="chip"&gt;~15 min&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="mb-0 text-muted"&gt;Celebrate after finals, make it a late-night run—either way, it’s a must.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="col-md-6 col-lg-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card h-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;img src="https://placehold.co/600x400" class="card-img-top" alt="IWU campus experience" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="d-flex justify-content-between align-items-start gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;h3 class="h6 fw-bold mb-1"&gt;🔐 Escape Room Night&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;span class="chip"&gt;Nearby&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="mb-0 text-muted"&gt;Teamwork, laughs, and bragging rights—perfect for roommates and friend groups.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="col-md-6 col-lg-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card h-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;img src="https://placehold.co/600x400" class="card-img-top" alt="IWU campus experience" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="d-flex justify-content-between align-items-start gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;h3 class="h6 fw-bold mb-1"&gt;🙏 Take a Spiritual Retreat Day&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;span class="chip"&gt;30–90 min&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="mb-0 text-muted"&gt;Step away from the noise—prayer, worship, and real connection with your people.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 id="fort-wayne" class="fw-bold mt-5 mb-3"&gt;Weekend Adventures: Fort Wayne &lt;span class="chip ms-2"&gt;~75 min&lt;/span&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-muted mb-4"&gt;An easy getaway with concerts, sports, and a surprisingly vibrant downtown.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Fort Wayne split-feature --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="py-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="row g-4 align-items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="col-lg-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="overflow-hidden rounded-4 shadow-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/1400x900" class="img-fluid w-100" alt="Downtown Fort Wayne riverfront" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="col-lg-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="d-flex align-items-center gap-2 mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="chip"&gt;Weekend Adventure&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="chip"&gt;Drive: ~75 min&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="eyebrow"&gt;FORT WAYNE&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3 class="h2 fw-bold mb-2"&gt;Big fun without the big drive.&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="text-muted mb-3"&gt;From live sports to concerts and food crawls, Fort Wayne is perfect for spontaneous weekends.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="row g-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;&lt;div&gt;🏒&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Komets Hockey&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;High-energy games and winter-night vibes.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;&lt;div&gt;⚾&lt;/div&gt;&lt;div&gt;&lt;strong&gt;TinCaps Baseball&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;Affordable, fun, and perfect for groups.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;&lt;div&gt;🎶&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Concerts &amp; Live Shows&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;Touring artists and big performances.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;&lt;div&gt;🍴&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Downtown Food Crawl&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;Dinner, dessert, and coffee in one walk.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;&lt;div&gt;🌿&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Rivergreenway Trails&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;Bike or walk along the rivers.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;&lt;div&gt;🎭&lt;/div&gt;&lt;div&gt;&lt;strong&gt;Theatre &amp; Arts&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;Creative nights that break the routine.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;hr class="my-5" /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="fw-bold mb-2"&gt;Big-City Weekends &lt;span class="chip ms-2"&gt;within ~2 hours&lt;/span&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-muted mb-4"&gt;Two easy getaways that feel like a true change of pace—without being far from Marion.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Indianapolis split-feature --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="indianapolis" class="py-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="row g-4 align-items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="col-lg-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="overflow-hidden rounded-4 shadow-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/1400x900" class="img-fluid w-100" alt="Indianapolis skyline and downtown attractions" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="col-lg-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="d-flex align-items-center gap-2 mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="chip"&gt;Weekend Adventure&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="chip"&gt;Drive: ~60 min&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="eyebrow"&gt;INDIANAPOLIS&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3 class="h2 fw-bold mb-2"&gt;Big events. Big energy. Easy day trips.&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="text-muted mb-3"&gt;From pro sports to museums and food districts, Indy is close enough for a Saturday—and fun enough for a full weekend.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="row g-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;🎡&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;Indiana State Fair&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;Concerts, fair food, and peak summer tradition.&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;🏈&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;Colts or Pacers Game&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;Big-league sports and downtown vibes.&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;🖼️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;Newfields&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;Art, gardens, and seasonal exhibits.&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;🍴&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;Mass Ave Food Crawl&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;Local restaurants, dessert, and coffee.&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;🛋️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;IKEA Road Trip&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;Dorm décor + Swedish meatballs = college classic.&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;🌳&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;Canal Walk&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;A relaxed reset between activities.&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;hr class="my-5" /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Chicago split-feature (alternate layout) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="chicago" class="py-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="row g-4 align-items-center flex-lg-row-reverse"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="col-lg-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="overflow-hidden rounded-4 shadow-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/1400x900" class="img-fluid w-100" alt="Chicago skyline and lakefront" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="col-lg-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="d-flex align-items-center gap-2 mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="chip"&gt;Bonus Experience&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="chip"&gt;Drive: ~2 hours&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="eyebrow"&gt;CHICAGO&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;h3 class="h2 fw-bold mb-2"&gt;A true big-city weekend—right within reach.&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="text-muted mb-3"&gt;Go for a concert, a museum day, or a skyline photo. Bring friends—and bring your appetite.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="row g-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;🎶&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;Major Concert or Game&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;Iconic venues and unforgettable energy.&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;🌳&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;Millennium Park&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;Must-see landmarks and classic photos.&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;🖼️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;Museum Day&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;World-class art, science, and culture.&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;🍕&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;Food Crawl&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;Deep-dish, street eats, and global cuisine.&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;🚆&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;Make It a Weekend Trip&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;Collect the kind of memories that stick.&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-sm-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;div class="d-flex gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;🌆&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;&lt;strong&gt;Riverwalk Views&lt;/strong&gt;&lt;br /&gt;&lt;span class="text-muted"&gt;Skyline strolls and city-night vibes.&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Timeline: Your 4 Years at IWU (Mock Layout) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;hr class="my-5" /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="timeline" class="pb-5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2 class="fw-bold mb-2"&gt;Your 4 Years at IWU&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="text-muted mb-4"&gt;From move-in day to graduation—this is what life in Marion can look like over time.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="row g-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Year 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="col-lg-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="h-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="eyebrow"&gt;Year One&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="h5 fw-bold"&gt;Finding Your Place&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-muted"&gt;Meet friends, learn traditions, and settle into campus life.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul class="list-unstyled small"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;🏟️ First IWU home game&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;🙏 Chapel &amp; worship nights&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;🍦 First Ivanhoe’s run&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;📸 Iconic campus photos&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Year 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="col-lg-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="h-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="eyebrow"&gt;Year Two&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="h5 fw-bold"&gt;Getting Involved&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-muted"&gt;Try new things, lead something, and explore beyond campus.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul class="list-unstyled small"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;🎤 Join a club or team&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;🏈 Tailgate rivalry games&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;🌲 Mississinewa &amp; Salamonie trips&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;🎶 Local festivals&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Year 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="col-lg-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="h-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="eyebrow"&gt;Year Three&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="h5 fw-bold"&gt;Expanding Your World&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-muted"&gt;Weekend adventures, deeper friendships, and growing confidence.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul class="list-unstyled small"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;🚗 Fort Wayne day trips&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;🎭 Concerts &amp; shows&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;🙏 Spiritual retreats&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;☕ Favorite off-campus spots&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Year 4 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="col-lg-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="h-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="eyebrow"&gt;Year Four&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="h5 fw-bold"&gt;Making It Count&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-muted"&gt;Celebrate milestones and soak in your final moments.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul class="list-unstyled small"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;🌆 Indy &amp; Chicago weekends&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;📸 Graduation photos&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;🎄 One last Christmas on campus&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;li&gt;🎓 Senior traditions&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="footer py-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="mb-0"&gt;Indiana Wesleyan University — Marion&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Subtle animation on campus tab change (OSU-style preview panel)</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.addEventListener('shown.bs.tab', function (event) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const targetSelector = event.target?.getAttribute('data-bs-target');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!targetSelector) return;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const pane = document.querySelector(targetSelector);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!pane) return;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Add a short animation class, then remove it so it can re-trigger</p>
+<p class="p1"><span class="Apple-converted-space">        </span>pane.classList.remove('campus-pane-animate');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Force reflow to restart animation</p>
+<p class="p1"><span class="Apple-converted-space">        </span>void pane.offsetWidth;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>pane.classList.add('campus-pane-animate');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
